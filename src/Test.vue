@@ -6,12 +6,12 @@
 </template>
 
 <script>
+import store from './store.js'
+
 export default {
     methods: {
         add() {
-            console.log(this)
-            console.log(this.$store)
-            ++this.ticker
+            store.dispatch('test', 'test from test component')
         }
     }
 }
