@@ -5,3 +5,4 @@ test
 webpack.config.js
 yarn.lock
 tsconfig.json
+yarn-error.log

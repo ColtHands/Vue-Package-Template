@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import VueNotify from './../src/index.js'
+import VueTestPackage from './../src/index.js'
 import App from './App.vue'
 
-Vue.use(VueNotify)
+Vue.use(VueTestPackage)
 
 new Vue({
     el: '#app',
