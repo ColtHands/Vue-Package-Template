@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueTestPackage from './../src/index.js'
+import VueTestPackage from './../src/plugin.js'
 import App from './App.vue'
 
 Vue.use(VueTestPackage)

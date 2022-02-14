@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="clickHandle">Click me</button>
+        <button @click="clickHandle" v-directive:argument.modifier="'value' + 'expression'">Click me</button>
     </div>
 </template>
 

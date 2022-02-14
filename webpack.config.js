@@ -8,7 +8,7 @@ const minimize = argv.mode == 'production'
 const devMode = argv.mode == 'development'
 
 module.exports = {
-    entry: devMode ? './example/index.js' : './src/index.js',
+    entry: devMode ? './example/index.js' : './src/plugin.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
@@ -31,10 +31,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 enforce: 'pre',
-                use: ['source-map-loader'],
+                use: ['source-map-loader']
             },
             {
-                test: /\.(j|t)s$/,
+                test: /\.(ts)$/,
+                exclude: [/node_modules/, /example/],
+                loader: 'ts-loader'
+            },
+            {
+                test: /\.(js)$/,
                 exclude: [/node_modules/, /example/],
                 loader: 'babel-loader',
                 options: {
@@ -86,7 +91,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new VueLoaderPlugin(),
+        new VueLoaderPlugin()
     ],
     resolve: {
         extensions: [
