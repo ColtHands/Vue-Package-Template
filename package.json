@@ -8,6 +8,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@colthands"
   },
+  "keywords": [
+    "keyword"
+  ],
   "babel": {
     "presets": [
       "@babel/preset-env"
