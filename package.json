@@ -35,6 +35,7 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack --mode=production",
+    "save": "git status && git add . && git commit -m save && git push",
     "test": "jest"
   },
   "devDependencies": {
