@@ -107,10 +107,12 @@ module.exports = {
     devServer: devMode ? {
         static: ['example', 'dist'],
         compress: false,
-        port: argv.PORT || 3003,
+        port: 3003,
+        host: '0.0.0.0',
         hot: true,
         historyApiFallback: {
             index: 'index.html'
-        }
+        },
+        allowedHosts: 'all'
     } : {}
 }
